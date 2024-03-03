@@ -60,6 +60,9 @@ def logNatural(num):
         return "Invalid input"
     return math.log(num)
 
+def sumayresta(a, b):
+    subtraction(a, b)
+    addArbitraryNumbers(a, b)
 
 def main():
     while True:
