@@ -40,8 +40,7 @@ def calculate_average_time(method, numTimes):
 
 def printMostFastestMethod(avgTimeList, avgTimeNumpyArray, avgTimeVectorized):
     print("---------------------------------------------------------------------------------")
-    
-    
+
     if avgTimeList < avgTimeNumpyArray and avgTimeList < avgTimeVectorized:
         print("The fastest method is method a (storing values in a list) with {}".format(
             avgTimeList))
