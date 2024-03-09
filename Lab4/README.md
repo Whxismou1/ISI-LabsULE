@@ -2,31 +2,18 @@
 
 En este laboratorio se abordan los siguientes ejercicios:
 
-## [Ejercicio 1](Lab4_1.py): Operaciones Matriciales
-   Realiza las siguientes operaciones matriciales:
+## [Ejercicio 1](./exercise1/Lab4_1.py): Manipulación de Datos con Pandas
+Crea un conjunto de datos que contenga información sobre 5 estudiantes, incluyendo sus nombres, edades y puntajes de prueba (0-100). Guarda los datos en un archivo CSV, luego tu tarea es cargar estos datos en un DataFrame de pandas y realizar varias operaciones para analizar y manipular los datos.
 
-   a. Crea la siguiente matriz y almacénala en la variable `Matrix1`:
-   ```
-   [[4, -2, 7],[9, 4, 1],[5, -1, 5]]
-   ```
-   
-b. Calcula su transpuesta y almacénala en la variable `Matrix2`.
-
-c. Calcula el producto elemento a elemento de `Matrix1` y `Matrix2`.
-
-d. Calcula el producto de las matrices `Matrix1` y `Matrix2` y almacénalo en la variable `prodM1M2`.
-
-e. Calcula el producto de las matrices `Matrix2` y `Matrix1` y almacénalo en la variable `prodM2M1`.
-
-f. Almacena en una matriz 2D llamada `mat_corners` las esquinas de `Matrix1` en una sola línea de código.
-
-g. Calcula el máximo de cada fila de `Matrix1` y almacénalo en `vec_max`. Además, calcula el máximo global de `Matrix1`.
-
-h. Calcula el mínimo de cada columna de `Matrix1` y almacénalo en `vec_min`. Además, calcula el mínimo global de `Matrix1`.
-
-i. Calcula el producto matricial de `vec_min` y `vec_max` (en ese orden), de modo que el resultado sea una matriz de forma (3, 3).
-
-j. Calcula la suma de los elementos de la primera y tercera columna de `Matrix1` y almacénalos en una variable llamada `mat_sum`. Hazlo en solo una línea de código.
+- **Carga de Datos**: Carga el archivo CSV proporcionado, "student_data.csv", en un DataFrame de pandas. El archivo CSV contiene las columnas: Nombre, Edad y Puntaje.
+- **Exploración Básica**:
+  - Muestra las primeras 5 filas del DataFrame para inspeccionar los datos.
+  - Imprime los tipos de datos de cada columna.
+  - Verifica si hay valores faltantes en el DataFrame.
+- **Análisis Estadístico**: Calcula y muestra la media y la mediana de los puntajes de prueba.
+- **Filtrado de Datos**: Crea un nuevo DataFrame que contenga solo las filas donde la edad es mayor que 20.
+- **Agrupación y Agregación**: Agrupa los datos por edad y calcula el puntaje promedio para cada grupo de edad.
+- **Exportación de Datos**: Guarda el DataFrame filtrado (del paso 4) en un nuevo archivo CSV llamado "filtered_student_data.csv".
 
 
 ### Instrucciones de Ejecución
@@ -36,17 +23,12 @@ Para ejecutar el programa, sigue estos pasos:
 3. Ejecuta el archivo `Lab4_1.py` utilizando el intérprete de Python.
 
 
-## [Ejercicio 2](Lab4_2.py): Indexación Booleana
+## [Ejercicio 2](./exercise2/Lab4_2.py): Gráficos Trigonométricos
 
-Genera una matriz cuadrada con 400 puntos en la que cada elemento sea un valor aleatorio en el intervalo [0, 3). Imprime en la pantalla:
+Crea tres gráficos en una Figura. En cada uno de esos tres gráficos se representan las relaciones trigonométricas del ángulo 〈 y (〈 + π/4). Un gráfico será continuo en rojo y el otro discontinuo en negro. Etiqueta cada uno de ellos apropiadamente.
 
-a. La matriz original.
-
-b. Las coordenadas de los elementos cuyo valor está entre 1 y 2.
-
-c. Las coordenadas de los elementos que son menores que 1 o mayores que 2.
-
-d. Redondea la matriz generada y luego imprime las coordenadas de los valores que son diferentes de 1 en la matriz redondeada.
+El resultado tiene que ser identico al siguiente:
+![](./images/ej2.png)
 
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
@@ -57,14 +39,19 @@ Para ejecutar el programa, sigue estos pasos:
 
 
 
-## [Ejercicio 3](Lab4_3.py): Distancia entre Elementos
+## [Ejercicio 3](./exercise3/Lab4_3.py): Centro de Masa de Partículas
 
-Genera una matriz con dimensiones 10x4 cuyos elementos sean valores aleatorios en el intervalo [-10, 10). Luego, considerando que cada fila es un punto en un espacio 4D, realiza lo siguiente:
+Crea un programa que calcule el centro de masa de un conjunto de partículas introducido por el usuario en un sistema bidimensional.
 
-a. Crea una matriz de distancia euclidiana. Es una matriz con el mismo número de filas y columnas que el número de puntos considerados (tenemos 10 puntos, por lo que las dimensiones en este caso son 10x10). Un elemento dij en dicha matriz es la distancia euclidiana entre los puntos xi y xj (es decir, las filas i y j en nuestra matriz 10x4).
-
-b. Indica la distancia entre los puntos, cuando dicha distancia sea menor que 10, y los números de los puntos (es decir, las filas donde se encuentran los puntos) con el mensaje: "La distancia euclidiana entre los vectores i y j es X", cambiando i, j y X por los números de los puntos y la distancia.
-
+- Solicita al usuario en la pantalla el número de partículas que estarán en el sistema.
+- Solicita al usuario en la pantalla las coordenadas y la masa de cada partícula de la siguiente manera:
+  ![](./images/ej3-b.png)
+- Calcula las coordenadas del centro de masa utilizando la ecuación proporcionada:
+  ![](./images/ej3-c.png)
+- Grafica cada partícula en su posición correspondiente, escribiendo su masa junto a la partícula. Además, dibuja el centro de masa del sistema de partículas en la posición calculada utilizando la ecuación, asignándole la masa de todo el sistema.
+  
+El resultado tiene que ser similar al siguiente:
+![](./images/ej3-finalresult.png)
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
 1. Abre una terminal.
@@ -73,23 +60,31 @@ Para ejecutar el programa, sigue estos pasos:
 
 
 
-## [Ejercicio 4](Lab4_4.py): Optimización de Código
+## [Ejercicio 4](./exercise4/Lab4_4.py): Gráfico de Dispersión 3D del Conjunto de Datos Iris
 
-Escribe una función que calcule los cuadrados de los N primeros números naturales (donde N es el parámetro de entrada de la función) de tres formas diferentes:
+Haz un gráfico de dispersión 3D del conjunto de datos iris, proporcionado en el archivo iris.csv. Cada fila del CSV proporciona la información de una flor. Cada flor se describe mediante 4 características (longitud del sépalo, ancho del sépalo, longitud del pétalo y ancho del pétalo), cuyos nombres se escriben en la primera fila del CSV.
 
-a. Almacenando los valores en una lista.
-
-b. Almacenando los valores en un arreglo unidimensional de NumPy previamente asignado (por ejemplo, creándolo con `np.zeros()`), pero calculando el cuadrado de cada elemento en un bucle for.
-
-c. Vectorizando la operación.
-
-Calcula, utilizando `timeit`, el tiempo promedio necesario para calcular los cuadrados con cada método y muestra esos tiempos en la pantalla. Prueba con valores grandes de N (por ejemplo, 100000). ¿Cuáles son los tiempos?
+El resultado final tiene que ser algo parecido a:
+![](./images/ej4-finalresult.png)
 
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
 1. Abre una terminal.
 2. Navega hasta la carpeta del Laboratorio 4.
 3. Ejecuta el archivo `Lab4_4.py` utilizando el intérprete de Python.
+
+## [Ejercicio 5](./exercise5/Lab4_5.py): Gráfico de Barras de Ventas de Productos
+
+Utiliza el archivo company_sales_data.csv. Este archivo contiene las ventas de diferentes productos a lo largo de todo el año. Lee el archivo como un DataFrame de pandas y traza un gráfico de barras que muestre tanto la crema facial como el lavado facial durante todos los meses del año.
+
+El resultado final tiene que ser algo parecido a:
+![](./images/ej5-finalresult.png)
+
+### Instrucciones de Ejecución
+Para ejecutar el programa, sigue estos pasos:
+1. Abre una terminal.
+2. Navega hasta la carpeta del Laboratorio 4.
+3. Ejecuta el archivo `Lab4_5.py` utilizando el intérprete de Python.
 
 
 

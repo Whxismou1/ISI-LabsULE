@@ -94,4 +94,4 @@ Para ejecutar el programa, sigue estos pasos:
 
 
 ---
-Este README.md proporciona una guía completa para entender y ejecutar las operaciones requeridas en el Laboratorio 4. Cada sección describe detalladamente las operaciones a realizar y cómo ejecutar el código asociado a cada una.
+Este README.md proporciona una guía completa para entender y ejecutar las operaciones requeridas en el Laboratorio 3. Cada sección describe detalladamente las operaciones a realizar y cómo ejecutar el código asociado a cada una.
