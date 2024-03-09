@@ -27,7 +27,7 @@ Para ejecutar el programa, sigue estos pasos:
 
 Crea tres gráficos en una Figura. En cada uno de esos tres gráficos se representan las relaciones trigonométricas del ángulo 〈 y (〈 + π/4). Un gráfico será continuo en rojo y el otro discontinuo en negro. Etiqueta cada uno de ellos apropiadamente.
 
-El resultado tiene que ser identico al siguiente:
+El resultado tiene que ser identico al siguiente:<br/>
 ![](./images/ej2.png)
 
 ### Instrucciones de Ejecución
@@ -51,6 +51,7 @@ Crea un programa que calcule el centro de masa de un conjunto de partículas int
 - Grafica cada partícula en su posición correspondiente, escribiendo su masa junto a la partícula. Además, dibuja el centro de masa del sistema de partículas en la posición calculada utilizando la ecuación, asignándole la masa de todo el sistema.
   
 El resultado tiene que ser similar al siguiente:
+<br/>
 ![](./images/ej3-finalresult.png)
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
@@ -64,7 +65,7 @@ Para ejecutar el programa, sigue estos pasos:
 
 Haz un gráfico de dispersión 3D del conjunto de datos iris, proporcionado en el archivo iris.csv. Cada fila del CSV proporciona la información de una flor. Cada flor se describe mediante 4 características (longitud del sépalo, ancho del sépalo, longitud del pétalo y ancho del pétalo), cuyos nombres se escriben en la primera fila del CSV.
 
-El resultado final tiene que ser algo parecido a:
+El resultado final tiene que ser algo parecido a:<br/>
 ![](./images/ej4-finalresult.png)
 
 ### Instrucciones de Ejecución
@@ -77,7 +78,7 @@ Para ejecutar el programa, sigue estos pasos:
 
 Utiliza el archivo company_sales_data.csv. Este archivo contiene las ventas de diferentes productos a lo largo de todo el año. Lee el archivo como un DataFrame de pandas y traza un gráfico de barras que muestre tanto la crema facial como el lavado facial durante todos los meses del año.
 
-El resultado final tiene que ser algo parecido a:
+El resultado final tiene que ser algo parecido a:<br/>
 ![](./images/ej5-finalresult.png)
 
 ### Instrucciones de Ejecución
