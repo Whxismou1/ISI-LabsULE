@@ -1,8 +1,8 @@
-# Laboratorio 3
+# Laboratorio 4
 
 En este laboratorio se abordan los siguientes ejercicios:
 
-## [Ejercicio 1](Lab3_1.py): Operaciones Matriciales
+## [Ejercicio 1](Lab4_1.py): Operaciones Matriciales
    Realiza las siguientes operaciones matriciales:
 
    a. Crea la siguiente matriz y almacénala en la variable `Matrix1`:
@@ -32,11 +32,11 @@ j. Calcula la suma de los elementos de la primera y tercera columna de `Matrix1`
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
 1. Abre una terminal.
-2. Navega hasta la carpeta del Laboratorio 3.
-3. Ejecuta el archivo `Lab3_1.py` utilizando el intérprete de Python.
+2. Navega hasta la carpeta del Laboratorio 4.
+3. Ejecuta el archivo `Lab4_1.py` utilizando el intérprete de Python.
 
 
-## [Ejercicio 2](Lab3_2.py): Indexación Booleana
+## [Ejercicio 2](Lab4_2.py): Indexación Booleana
 
 Genera una matriz cuadrada con 400 puntos en la que cada elemento sea un valor aleatorio en el intervalo [0, 3). Imprime en la pantalla:
 
@@ -51,13 +51,13 @@ d. Redondea la matriz generada y luego imprime las coordenadas de los valores qu
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
 1. Abre una terminal.
-2. Navega hasta la carpeta del Laboratorio 3.
-3. Ejecuta el archivo `Lab3_2.py` utilizando el intérprete de Python.
+2. Navega hasta la carpeta del Laboratorio 4.
+3. Ejecuta el archivo `Lab4_2.py` utilizando el intérprete de Python.
 
 
 
 
-## [Ejercicio 3](Lab3_3.py): Distancia entre Elementos
+## [Ejercicio 3](Lab4_3.py): Distancia entre Elementos
 
 Genera una matriz con dimensiones 10x4 cuyos elementos sean valores aleatorios en el intervalo [-10, 10). Luego, considerando que cada fila es un punto en un espacio 4D, realiza lo siguiente:
 
@@ -68,12 +68,12 @@ b. Indica la distancia entre los puntos, cuando dicha distancia sea menor que 10
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
 1. Abre una terminal.
-2. Navega hasta la carpeta del Laboratorio 3.
-3. Ejecuta el archivo `Lab3_3.py` utilizando el intérprete de Python.
+2. Navega hasta la carpeta del Laboratorio 4.
+3. Ejecuta el archivo `Lab4_3.py` utilizando el intérprete de Python.
 
 
 
-## [Ejercicio 4](Lab3_4.py): Optimización de Código
+## [Ejercicio 4](Lab4_4.py): Optimización de Código
 
 Escribe una función que calcule los cuadrados de los N primeros números naturales (donde N es el parámetro de entrada de la función) de tres formas diferentes:
 
@@ -88,8 +88,8 @@ Calcula, utilizando `timeit`, el tiempo promedio necesario para calcular los cua
 ### Instrucciones de Ejecución
 Para ejecutar el programa, sigue estos pasos:
 1. Abre una terminal.
-2. Navega hasta la carpeta del Laboratorio 3.
-3. Ejecuta el archivo `Lab3_4.py` utilizando el intérprete de Python.
+2. Navega hasta la carpeta del Laboratorio 4.
+3. Ejecuta el archivo `Lab4_4.py` utilizando el intérprete de Python.
 
 
 
