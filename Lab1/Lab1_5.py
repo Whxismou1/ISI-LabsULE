@@ -14,6 +14,7 @@ def getLetterOfDNI(numDNI):
     remaining = numDNI % 23
     
     print(remaining)
+    return lista[remaining]
     
     if numDNI % 2==0:
         return lista[remaining]

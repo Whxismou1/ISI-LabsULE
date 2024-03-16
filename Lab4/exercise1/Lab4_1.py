@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # DataFrame. The CSV file contains columns: Name, Age, and Score.
 ruta = './Lab4/exercise1/'
 studentsInfo = {'Name': ['Mou', 'Ana', 'Diego', 'Mario', 'Laura'], 'Age': [
-    21, 20, 70, 45, 23], 'Score': [80, 70, 95, 80, 10]}
+    21, 20, 70, 45, 23], 'hours': [100, 22, 39, 30, 3], 'Score': [80, 70, 95, 80, 10]}
 
 df = pd.DataFrame(studentsInfo)
 
@@ -29,7 +29,7 @@ print("Mean score: ", score_table.mean())
 print("Median score: ", score_table.median())
 print("---------------------------")
 
-# g. Filtering Data: Create a new DataFrame containing only the rows where the age is greater than 20. 
+# g. Filtering Data: Create a new DataFrame containing only the rows where the age is greater than 20.
 dfAgeBiggerThan20 = df[df['Age'] > 20]
 print(dfAgeBiggerThan20)
 print("---------------------------")
@@ -44,3 +44,16 @@ print("---------------------------")
 # named "filtered_student_data.csv"
 
 dfAgeBiggerThan20.to_csv(ruta+'filtered_student_data.csv')
+
+
+# df['relScoreAge'] = df['Score'] / df['Age']
+
+
+plt.figure(figsize=(10, 6))
+plt.plot(df['Name'], df['Score'], label='Score', color='r', linewidth=1, marker='o', markersize=10)
+plt.bar(df['Name'], df['hours'], width=-0.4, align='edge', label='Hours' )
+plt.bar(df['Name'], df['Age'], width=0.4, align='edge' , label='Age' )
+plt.xlabel('Nombre')
+plt.legend(loc='upper right')
+plt.grid(True)
+plt.show()

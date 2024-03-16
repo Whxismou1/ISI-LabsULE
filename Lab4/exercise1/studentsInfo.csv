@@ -1,6 +1,6 @@
-,Name,Age,Score
-0,Mou,21,80
-1,Ana,20,70
-2,Diego,70,95
-3,Mario,45,80
-4,Laura,23,10
+,Name,Age,hours,Score
+0,Mou,21,100,80
+1,Ana,20,22,70
+2,Diego,70,39,95
+3,Mario,45,30,80
+4,Laura,23,3,10
