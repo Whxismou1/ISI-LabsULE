@@ -15,7 +15,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-
 def classify_kNN(X_train, y_train, X_test, k):
     """
     This function implements the kNN classification algorithm with the
@@ -148,7 +147,6 @@ if __name__ == "__main__":
     X_test = X[inds_test, :]
     y_test = y[inds_test]
     # ============================================
-
     # ***********************************************************************
     # ***********************************************************************
     # PART 2: K-NEAREST NEIGHBOURS ALGORITHM
