@@ -380,13 +380,13 @@ if __name__ == "__main__":
     # F1 score
     # ====================== YOUR CODE HERE ======================
     TP = np.diag(confm)[1]
-    FP = confm[1, 0]
-    FN = confm[0, 1]
+    FP = confm[0, 1]
+    FN = confm[1, 0]
 
     precision = TP / (TP + FP)
     recall = TP / (TP + FN)
 
-    f_score = 2 * ((precision * recall)/(precision * recall))
+    f_score = 2 * ((precision * recall)/(precision + recall))
     # ============================================================
     print("")
     print("***************")
