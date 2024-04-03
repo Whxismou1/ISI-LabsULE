@@ -1,6 +1,6 @@
 # Laboratorio 6
 
-En este laboratorio se abordan dos implementaciones del algoritmo de regresion logistica para clasificar datos de masas detectadas en mamografias para determinar si son benignas (clase 0) o malignas (clase 1). Una implementación se realiza manualmente en Python, mientras que la otra utiliza el algoritmo kNN de la biblioteca scikit-learn.
+En este laboratorio se abordan dos implementaciones del algoritmo de regresion logistica para clasificar datos de masas detectadas en mamografias para determinar si son benignas (clase 0) o malignas (clase 1). Una implementación se realiza manualmente en Python, mientras que la otra utiliza el algoritmo de regresion logistica de la biblioteca scikit-learn.
 
 ## Estructura de Archivos y Directorios
 
