@@ -61,7 +61,9 @@ def main():
     
     print("++++++++Apartado I++++++++")
     vec_min = vec_min.reshape(-1, 1)
+    print("vecmiin: ", vec_min)
     vec_max = vec_max.reshape(1, -1)
+    print("vecmax:", vec_max)
     restul = vec_min @ vec_max
     print(restul)
     
