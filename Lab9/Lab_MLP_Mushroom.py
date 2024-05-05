@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Lab ULE
+@author: Whxismou
 """
 
 # import the necessary packages
@@ -23,7 +23,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 
 
 # Load the dataset
-df = pd.read_csv("mushrooms.csv")
+df = pd.read_csv("Data/mushrooms.csv")
 
 # Let's examine the dataset 
 df.head()
@@ -55,7 +55,7 @@ y = df['class']
 #Split train-test data
 # Use 30% of the data for test and make the split stratified according to the class
 # ====================== YOUR CODE HERE ======================
-
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 # ============================================================
 
 
@@ -65,26 +65,26 @@ y = df['class']
 # Maximum number of iteratios 150, tolerance 1e-5
 # Optimization algorithm: adam
 # ====================== YOUR CODE HERE ======================
-
+clf = MLPClassifier(hidden_layer_sizes=(3), activation="relu", max_iter=150, tol=1e-5, random_state=1, solver="adam")
 # ============================================================
     
 
 # Train the MLP
 # ====================== YOUR CODE HERE ======================
-
+clf.fit(X_train, y_train)
 # ============================================================
 
 
 # Compute the outputs for the test set
 # ====================== YOUR CODE HERE ======================
-y_test_assig=
+y_test_assig= clf.predict(X_test)
 # ============================================================
 
 
 # Evaluate the Classifier 
 # Compute the confusion matrix
 # ====================== YOUR CODE HERE ======================
-
+cm = confusion_matrix(y_test, y_test_assig)
 # ============================================================
 disp = ConfusionMatrixDisplay(confusion_matrix=cm)
 disp.plot()
@@ -92,8 +92,8 @@ plt.title('Confusion Matrix for Mushroom Dataset', fontsize=14)
 plt.show()
 
 print('=======================')
-print('Train Accuracy:',----------------)
-print('Test Accuracy:',-----------------)
+print('Train Accuracy:', clf.score(X_train, y_train))
+print('Test Accuracy:',clf.score(X_test, y_test))
 print('=======================')
 
 

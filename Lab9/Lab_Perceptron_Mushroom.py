@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Lab ULE
+@author: Whxismou
 """
 
 # import the necessary packages
@@ -23,7 +23,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 
 
 # Load the dataset
-df = pd.read_csv("mushrooms.csv")
+df = pd.read_csv("Data/mushrooms.csv")
 
 # Let's examine the dataset 
 df.head()
@@ -31,7 +31,7 @@ df.info()
 
 # Shape of the dataset
 # ====================== YOUR CODE HERE ======================
-print("Dataset shape:", ----------)
+print("Dataset shape:", df.shape)
 # ============================================================
 
 
@@ -55,7 +55,7 @@ y = df['class']
 #Split train-test data
 # Use 30% of the data for test and make the split stratified according to the class
 # ====================== YOUR CODE HERE ======================
-
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 # ============================================================
 
 
@@ -63,7 +63,7 @@ y = df['class']
 #Create the classification model: Perceptron
 # Indicate 100 as maximum number of iteratios, tolerance 0.00001 and learning rate equal to 1
 # ====================== YOUR CODE HERE ======================
-
+clf = Perceptron(max_iter=100, eta0=1, tol=0.00001)
 # ============================================================
     
 
@@ -76,7 +76,7 @@ y_test_assig=clf.predict(X_test)
 # Evaluate the Classifier 
 # Compute the confusion matrix
 # ====================== YOUR CODE HERE ======================
-
+cm = confusion_matrix(y_test, y_test_assig)
 # ============================================================
 disp = ConfusionMatrixDisplay(confusion_matrix=cm)
 disp.plot()
@@ -84,8 +84,8 @@ plt.title('Confusion Matrix for Mushroom Dataset', fontsize=14)
 plt.show()
 
 print('=======================')
-print('Train Accuracy:',----------------)
-print('Test Accuracy:',-----------------)
+print('Train Accuracy:', clf.score(X_train, y_train))
+print('Test Accuracy:',clf.score(X_test, y_test))
 print('=======================')
 
 

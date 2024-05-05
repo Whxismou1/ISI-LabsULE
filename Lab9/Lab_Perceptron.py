@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Lab ULE
+@author: Whxismou
 """
 
 # import the necessary packages
@@ -65,7 +65,8 @@ def vis_data_2D (X,y):
 # Use two centers. One of the centers  at [4,-5] and the other at [0,3].
 # Fix the standard deviation for the gaussian data with value 3
 # ====================== YOUR CODE HERE ======================
-
+X, y = make_blobs(n_samples=3000, n_features=2, centers=[[4,-5], [0,3]],cluster_std=3)
+#X, y = make_moons(n_samples=3000, noise=(0.3))
 # ============================================================
 
 
@@ -78,7 +79,7 @@ vis_data_2D(X,y)
 #Split train-test data
 # Use 30% of the data for test and make the split stratified according to the class
 # ====================== YOUR CODE HERE ======================
-X_train, X_test, y_train, y_test =
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratify=y,random_state=1)
 # ============================================================
 
 
@@ -87,22 +88,22 @@ X_train, X_test, y_train, y_test =
 # Create the classification model: Perceptron
 # with maximum number of iterations of 1000, learning rate 1 and tolerance 1e-4
 # ====================== YOUR CODE HERE ======================
-clf = Perceptron(------------------------------------)
+clf = Perceptron(max_iter=1000, eta0=1, tol=1e-4)
 # ============================================================
 
 
 
 # Train the Perceptron
 # ====================== YOUR CODE HERE ======================
-
+clf.fit(X_train, y_train)
 # ============================================================
 
 
 # Evaluate the Perceptron
 # ====================== YOUR CODE HERE ======================
 print('=======================')
-print('Train Accuracy:',clf.score(------------))
-print('Test Accuracy:',clf.score(-------------))
+print('Train Accuracy:',clf.score(X_train, y_train))
+print('Test Accuracy:',clf.score(X_test, y_test))
 print('=======================')
 # ============================================================
 
@@ -114,22 +115,24 @@ vis_classification_2D (X_test,y_test,clf)
 
 # Compute the outputs of the classifier for the test data X_test
 # ====================== YOUR CODE HERE ======================
-y_test_assig
+y_test_assig = clf.predict(X_test)
+print(y_test_assig)
 # ============================================================
 
 
 # Compute the output of the classifier for an example with features [0, 15]
 # ====================== YOUR CODE HERE ======================
-y_i_assig
+y_i_assig = clf.predict(np.array([[0, 15]]))
+print(y_i_assig)
 # ============================================================
 
 
 
 # Perceptron weights  after training
 # ====================== YOUR CODE HERE ======================
-print("weights of TRAINED Perceptron (w1 and w2): {}" .format(--------)) 
+print("weights of TRAINED Perceptron (w1 and w2): {}" .format(clf.coef_)) 
 # Model bias term 
-print("Bias term of the TRAINED perceptron (w0) {}".format(---------))
+print("Bias term of the TRAINED perceptron (w0) {}".format(clf.intercept_))
 # ====================== YOUR CODE HERE ======================
 
 
