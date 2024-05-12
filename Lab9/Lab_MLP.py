@@ -66,8 +66,8 @@ def vis_data_2D (X,y):
 # Use two centers. One of the centers  at [4,-5] and the other at [0,3].
 # Fix the standard deviation for the gaussian data with value 3
 # ====================== YOUR CODE HERE ======================
-X, y = make_blobs(n_samples=3000, n_features=2, centers=[[4,-5], [0,3]],cluster_std=3)
-#X, y = make_moons(n_samples=3000, noise=(0.3))
+#X, y = make_blobs(n_samples=3000, n_features=2, centers=[[4,-5], [0,3]],cluster_std=3)
+X, y = make_moons(n_samples=3000, noise=(0.3))
 # ============================================================
 
 

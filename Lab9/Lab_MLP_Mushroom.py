@@ -65,7 +65,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 # Maximum number of iteratios 150, tolerance 1e-5
 # Optimization algorithm: adam
 # ====================== YOUR CODE HERE ======================
-clf = MLPClassifier(hidden_layer_sizes=(3), activation="relu", max_iter=150, tol=1e-5, random_state=1, solver="adam")
+clf = MLPClassifier(hidden_layer_sizes=(7), activation="relu", max_iter=150, tol=1e-5, random_state=1, solver="adam")
 # ============================================================
     
 
