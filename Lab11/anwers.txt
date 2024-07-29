@@ -1,0 +1,108 @@
+1.3.1. Based on the previous result, which two features have (on average) the smallest values
+and the largest values?
+    The smallest two features are on average FlightTrans (1.373593) 
+    and BonusTrans (11.6019)
+
+
+1.3.2. Why is it important to normalize the data before clustering?
+    It is important because it eliminates scaling effects. This aids in measuring distances, 
+    which are used by most clustering techniques.
+    
+1.4.1. What are the mean and standard deviation of the features in the standardized dataset?
+                Balance     QualMiles     BonusMiles  BonusTrans   FlightMiles    FlightTrans  DaysSinceEnroll
+    mean   2.842882e-17  6.574164e-17 -2.842882e-17 -7.817925e-17     0.000000   1.776801e-17  5.685763e-17
+    std    1.000125e+00  1.000125e+00  1.000125e+00  1.000125e+00     1.000125   1.000125e+00  1.000125e+00
+
+1.4.2. Based on the normalized dataset descriptive stats, which two features have (on average)
+the smallest values and the largest values?
+    The smallest value: BonusTrans (-7.817925e-17)
+    Largest value: QualMiles (6.574164e-17)
+
+2.1.1.1 Compared to the other clusters, Cluster 1 has the largest average values in which features
+(if any)? Based on this, how would you describe the Airline’s customers in Cluster 1?
+    They have the highest average values in Balance, BonusMiles, BonusTrans, FlightMiles, and FlightTrans, 
+    indicating they are highly engaged and loyal customers who frequently fly with the airline, actively 
+    participate in the loyalty program, and have accumulated many bonus miles.
+
+2.1.1.2 Applied the previous analysis to the remaining four clusters and describe them.
+    Cluster 2:
+        Consists of customers who are less engaged and loyal to the airline, with fewer miles accumulated. 
+        They are likely infrequent flyers and less active in the loyalty program, resulting in lower rewards
+        and benefits compared to other clusters.
+    
+    Cluster 3:
+        Has the lowest average values in FlightTrans, QualMiles, BonusMiles, BonusTrans, and FlightMiles. 
+        These customers are somewhat engaged with the loyalty program but do not frequently fly with the airline,
+        resulting in lower qualifying and average flight miles.
+    
+    Cluster 4:
+        Has the highest BonusMiles on average. This cluster likely represents customers who are highly engaged 
+        with the loyalty program and have accumulated a high balance of miles but may not necessarily be the most frequent flyers.
+    
+    Cluster 5:
+        Represents customers with a moderate level of engagement in the loyalty program, who are moderately
+        frequent flyers, and have accumulated a moderate balance of miles.
+
+2.1.2.1 Describe the relationship between the parameter k and the obtained sum of squared
+errors.
+    We observe that higher values of k result in less error. The optimal k would be 
+    the number of samples (resulting in zero error), but this is not practical for a classifier.
+
+2.1.2.2 Based on the results, indicate the optimal parameter k, that you consider appropriate to
+clustering the Airlines Cluster dataset.
+    Probably a k value near 8.
+
+
+
+
+
+
+2.2.1 Do you expect that Cluster 1 of the Hierarchical clustering to be necessarily similar to KMeans
+clustering? Compare the results obtained using K-Means and Hierarchical clustering.
+    It is not necessary for both methods to produce the same "Cluster 1." Comparing the obtained results,
+    we can confirm that the "Cluster 1" from each method is different, as they have significantly different
+    average values.
+
+2.2.2 Compared to the other hierarchical clusters, Cluster 1 has the largest average values in
+which features (if any)? Based on this, how would you describe the Airline’s customers in
+Cluster 1? Applied the previous analysis to the remaining four clusters and describe them.
+    Cluster 1 has the largest average values only in QualMiles.
+
+    Cluster 1:
+    These customers may be frequent flyers who primarily earn miles through flights, but also engage in some non-flight bonus activities.
+    
+    Cluster 2:
+    These customers are likely high-value customers who engage in various activities to earn miles and have a large balance of miles available for award travel.
+    
+    Cluster 3:
+    These customers may be infrequent flyers who earn most of their miles through non-flight bonus activities.
+    
+    Cluster 4:
+    These customers may be occasional flyers who engage in some non-flight bonus activities but do not earn a significant number of miles.
+    
+    Cluster 5:
+    These customers may be infrequent or non-flying members who have accumulated a small number of miles through occasional activities.
+
+2.2.3 Perform a new hierarchical clustering of the AirlineCluster Dataset using a different
+linkage method and compare with the clustering obtained using the ‘ward’ method. Explain
+what happens.
+    Using the 'single' method (Nearest Point Algorithm) results in almost every point being in the same cluster, except for 3 points, which create their own separate clusters. This approach produces worse results than the previous one.
+
+
+2.3.1 The estimated number of clusters and noise points in the three previous
+scenarios
+    Scenario a - Estimated number of clusters: 5
+    Scenario a - Estimated number of noise points: 2297
+
+    Scenario b - Estimated number of clusters: 12
+    Scenario b - Estimated number of noise points: 1940
+
+    Scenario c - Estimated number of clusters: 7
+    Scenario c - Estimated number of noise points: 3018
+
+2.3.2 Explain how decreasing “eps” affects to the estimated number of clusters
+    When we decrease eps, points that are far away are not considered part of the same cluster. This typically leads to a higher number of clusters, as shown in the results.
+
+2.3.3 Explain how decreasing “min_samples” affects to the estimated number of
+clusters
+    When decreasing min_samples, fewer points are needed to consider a region as dense. This makes it easier for regions to be considered clusters instead of noise. Therefore, there are more clusters and fewer noise points in this scenario.

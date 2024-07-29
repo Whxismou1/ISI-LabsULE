@@ -161,7 +161,8 @@ if __name__ == "__main__":
     # AREA UNDER THE ROC CURVE
     # Integration of the ROC curve using the trapezoidal rule
     # ====================== YOUR CODE HERE ======================
-    AUC = np.trapz(v_TPR, v_FPR)
+    AUC = np.trapz(y=np.flip(v_TPR), x=np.flip(v_FPR))
+    
     # ============================================================
 
     # Plot of the curve

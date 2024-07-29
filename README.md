@@ -13,3 +13,4 @@ Este repositorio contiene los laboratorios realizados como parte de la asignatur
 - [Lab 8](./Lab8/README.md)
 - [Lab 9](./Lab9/README.md)
 - [Lab 10](./Lab10/README.md)
+- [Lab 11](./Lab11/README.md)
